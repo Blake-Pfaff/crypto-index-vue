@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <CoinCard />
+    <CoinList />
   </div>
 </template>
 
 <script>
-import CoinCard from "@/components/CoinCard.vue";
+import CoinList from "@/views/CoinList.vue";
 
 export default {
   name: "App",
   components: {
-    CoinCard,
+    CoinList,
   },
 };
 </script>
