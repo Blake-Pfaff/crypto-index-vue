@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="coin-list">
     <div class="container">
       <div class="row">
         <CoinCard
@@ -38,4 +38,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.coin-list {
+  padding-top: 100px;
+}
+</style>
