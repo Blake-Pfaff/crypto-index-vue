@@ -1,6 +1,15 @@
 <template>
   <div>
-    <CoinCard />
+    <div class="container">
+      <div class="row">
+        <CoinCard
+          class="col-md-4"
+          v-for="currency in currencies"
+          :key="currency.id"
+          :currency="currency"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,10 +21,19 @@ export default {
   components: {
     CoinCard,
   },
+  data() {
+    return {
+      currencies: [],
+    };
+  },
   mounted() {
     axios
-      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-      .then((response) => (this.coin = response));
+      .get(
+        "https://api.nomics.com/v1/currencies/ticker?key=162de255932e490817e3c9b976140884"
+      )
+      .then((response) => {
+        this.currencies = response.data;
+      });
   },
 };
 </script>
