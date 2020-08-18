@@ -28,11 +28,13 @@ export default {
 };
 </script>
 
-<style>
-.coin-container .coin {
-  margin: 10px;
-  border: 1px solid gray;
-  padding: 20px;
+<style lang="scss">
+.coin-container {
+  .coin {
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 30px;
+  }
 }
 
 img {
