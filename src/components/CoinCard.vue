@@ -2,7 +2,7 @@
   <div class="coin-container">
     <div class="coin">
       <img :src="currency.logo_url" />
-      <h5>Howdy, I'm {{ currency.name }}, price: {{ price }}</h5>
+      <h5>{{ currency.name }}, price: {{ price }}</h5>
     </div>
   </div>
 </template>
